@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: profile-backend
+    env: node
+    build_command: npm install
+    start_command: node server.js
+    # Add environment variables
+    environment_variables:
+      MONGODB_URI: your_mongodb_connection_string_here
+      PORT: $PORT
