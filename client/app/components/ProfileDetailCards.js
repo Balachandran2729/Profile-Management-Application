@@ -3,8 +3,6 @@ import { useState } from 'react';
 const ProfileDetailCard = () => {
     const [activeTab, setActiveTab] = useState('caseStudies');
     const [currentIndex, setCurrentIndex] = useState(0);
-
-    // Sample data - replace with your actual data
     const caseStudies = [
         {
             id: 1,
@@ -85,14 +83,11 @@ const ProfileDetailCard = () => {
 
     return (
         <div className="w-full max-w-6xl mx-auto p-6">
-            {/* Header */}
             <div className="flex justify-between items-start mb-8">
                 <h2 className="text-3xl font-bold text-gray-700 leading-tight">
                     Case Insights &<br />
                     Key Projects
                 </h2>
-
-                {/* Tab Navigation */}
                 <div className="flex bg-gray-100 rounded-full p-1">
                     <button
                         onClick={() => handleTabChange('caseStudies')}
@@ -116,8 +111,6 @@ const ProfileDetailCard = () => {
                     </button>
                 </div>
             </div>
-
-            {/* Cards Container */}
             <div className="relative">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
                     {visibleItems.map((item) => (
@@ -137,8 +130,6 @@ const ProfileDetailCard = () => {
                         </div>
                     ))}
                 </div>
-
-                {/* Navigation Arrows - Positioned above the dots */}
                 {currentData.length > itemsToShow && (
                     <div className="absolute bottom-0.5 right-4 flex flex-col items-center space-y-2">
                         <div className="flex space-x-2">
@@ -173,8 +164,6 @@ const ProfileDetailCard = () => {
                     </div>
                 )}
             </div>
-
-            {/* Navigation Dots */}
             {totalDots > 1 && (
                 <div className="flex justify-center space-x-2 mt-6">
                     {Array.from({ length: totalDots }, (_, index) => (

@@ -6,6 +6,7 @@ import { fetchProfileById } from '../utils/api';
 import ProfileDetail1 from '../components/ProfileDetail1';
 import ProfileDetailCard from '../components/ProfileDetailCards';
 import ProfileDetail2 from '../components/ProfileDetail2';
+import ProfileDetail3 from '../components/ProfileDetail3';
 
 export default function Page2() {
   const searchParams = useSearchParams(); 
@@ -60,8 +61,8 @@ export default function Page2() {
     <div>
       <ProfileDetail1 profile={profile} />
       <ProfileDetailCard />
-      <ProfileDetail2 profile={profile} />
-      
+      <ProfileDetail2 />
+      <ProfileDetail3 profile={profile} />
     </div>
   );
 }

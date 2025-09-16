@@ -8,7 +8,7 @@ import { SiAdobephotoshop } from "react-icons/si";
 export default function ProfileDetail1({profile}) {
     return (
       <div className='flex flex-col'>
-        <div className='bg-orange-500 p-4 h-40 text-white flex flex-col justify-between items-baseline gap-4 '>
+        <div className='bg-gradient-to-r from-orange-400 to-red-500 p-4 h-40 text-white flex flex-col justify-between items-baseline gap-4 '>
             <div className='flex flex-row justify-start items-center gap-2 text-ml cursor-pointer hover:underline'>
                 <IoIosArrowBack className='w-6 h-6'/> 
                 <Link href='/'>

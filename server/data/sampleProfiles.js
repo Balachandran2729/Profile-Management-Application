@@ -6,19 +6,6 @@ const sampleProfiles = [
     gender: "Female",
     age: 32,
     pronouns: "She/Her",
-    bio: "Senior Product Designer with 7 years of experience creating user-centered digital products.",
-    email: "sarah.johnson@example.com",
-    phone: "+1 (555) 123-4567",
-    location: "San Francisco, CA",
-    jobTitle: "Senior Product Designer",
-    company: "Innovate Tech",
-    skills: ["Figma", "Adobe XD", "User Research", "Prototyping", "UI/UX Design"],
-    socialLinks: {
-      linkedin: "linkedin.com/in/sarahjohnson",
-      github: "github.com/sarahjohnson",
-      twitter: "@sarahjohnson"
-    },
-    website: "sarahjohnson.design",
     about: `I am Sarah Johnson, a passionate Senior Product Designer with over seven years of experience in crafting user-centered digital solutions. 
     My expertise lies in turning complex problems into simple, elegant, and accessible interfaces that enhance user satisfaction. 
     At Innovate Tech, I’ve led cross-functional teams to design applications that improved customer engagement by 35%. 
@@ -37,19 +24,6 @@ const sampleProfiles = [
     gender: "Female",
     age: 28,
     pronouns: "She/Her",
-    bio: "Full Stack Developer specializing in modern web technologies and cloud architecture.",
-    email: "emily.davis@example.com",
-    phone: "+1 (555) 987-6543",
-    location: "New York, NY",
-    jobTitle: "Full Stack Developer",
-    company: "Cloud Solutions Inc.",
-    skills: ["JavaScript", "React", "Node.js", "AWS", "Python", "Docker"],
-    socialLinks: {
-      linkedin: "linkedin.com/in/emilydavis",
-      github: "github.com/emilydavis",
-      twitter: "@emilydavis"
-    },
-    website: "emilydavis.dev",
     about: `I am Emily Davis, a Full Stack Developer with six years of hands-on experience in building scalable, cloud-based applications. 
     I specialize in React and Node.js, leveraging AWS infrastructure to deploy modern, secure, and reliable systems. 
     At Cloud Solutions Inc., I have contributed to projects that served over a million active users, ensuring performance optimization and fault-tolerant design. 
@@ -63,34 +37,12 @@ const sampleProfiles = [
   },
   {
     id: "3",
-    name: "Michael Chen",
-    avatar: "/3.jpeg",
+    name: "Saksham Arora",
+    avatar: "/3.png",
     gender: "Male",
-    age: 35,
+    age: 25,
     pronouns: "He/Him",
-    bio: "Software Engineering Manager with expertise in agile methodologies and team leadership.",
-    email: "michael.chen@example.com",
-    phone: "+1 (555) 456-7890",
-    location: "Seattle, WA",
-    jobTitle: "Engineering Manager",
-    company: "Tech Growth Corp",
-    skills: ["Leadership", "Agile", "Java", "Spring Boot", "Team Management"],
-    socialLinks: {
-      linkedin: "linkedin.com/in/michaelchen",
-      github: "github.com/michaelchen",
-      twitter: "@michaelchen"
-    },
-    website: "michaelchen.tech",
-    about: `I am Michael Chen, an Engineering Manager with more than a decade of experience leading software teams toward excellence. 
-    My core strength lies in building high-performing teams that thrive in agile environments. 
-    At Tech Growth Corp, I lead a team of 25 engineers delivering enterprise-grade solutions using Java and Spring Boot. 
-    I take pride in fostering a culture of collaboration, innovation, and continuous learning. 
-    Over the years, I’ve successfully scaled engineering teams, implemented agile frameworks, and improved delivery speed by 40%. 
-    My leadership philosophy emphasizes empathy, transparency, and empowerment. 
-    One of my proudest achievements is leading a digital transformation project that helped a Fortune 500 client modernize its systems, saving millions in annual costs. 
-    I believe in balancing technical depth with people management skills to ensure both product and personal growth. 
-    I regularly speak at tech conferences on topics like leadership and organizational scaling. 
-    Outside of work, I enjoy reading about history, mentoring startups, and hiking in the Pacific Northwest.`
+    about: `I am Saksham Arora, a 25-year-old MBA candidate at TAPMI, Bengaluru (2024-2026), with a BTech in Electronics & Communication (CGPA 7.95). I bring 35 months of experience, including boosting system scalability by 30% and earning the Rise Insta Award at Infosys for enhancing backend efficiency by 25%.I have developed Python-based analytics tools during internships and drove a 20% rise in donations through strategic social media campaigns. Certified in SQL, Python, Java, and IoT, I have also delivered impactful projects like a ReactJS prototype for accessibility and a QR-based attendance system. My achievements in national contests showcase both my technical expertise and creative problem-solving.`
   },
   {
     id: "4",
@@ -99,19 +51,6 @@ const sampleProfiles = [
     gender: "Male",
     age: 41,
     pronouns: "He/Him",
-    bio: "Data Scientist and Machine Learning Engineer passionate about AI applications.",
-    email: "david.wilson@example.com",
-    phone: "+1 (555) 234-5678",
-    location: "Boston, MA",
-    jobTitle: "Data Scientist",
-    company: "AI Research Labs",
-    skills: ["Python", "TensorFlow", "PyTorch", "Machine Learning", "Statistics"],
-    socialLinks: {
-      linkedin: "linkedin.com/in/davidwilson",
-      github: "github.com/davidwilson",
-      twitter: "@davidwilson"
-    },
-    website: "davidwilson.ai",
     about: `I am David Wilson, a Data Scientist and Machine Learning Engineer with over 12 years of experience in harnessing data for business impact. 
     At AI Research Labs, I focus on creating predictive models and deploying AI solutions that solve real-world challenges. 
     My expertise includes deep learning, natural language processing, and recommendation systems. 
@@ -130,19 +69,6 @@ const sampleProfiles = [
     gender: "Male",
     age: 29,
     pronouns: "He/Him",
-    bio: "DevOps Engineer with focus on cloud infrastructure and automation pipelines.",
-    email: "robert.taylor@example.com",
-    phone: "+1 (555) 876-5432",
-    location: "Austin, TX",
-    jobTitle: "DevOps Engineer",
-    company: "Infrastructure Solutions",
-    skills: ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform", "Linux"],
-    socialLinks: {
-      linkedin: "linkedin.com/in/roberttaylor",
-      github: "github.com/roberttaylor",
-      twitter: "@roberttaylor"
-    },
-    website: "roberttaylor.devops",
     about: `I am Robert Taylor, a DevOps Engineer passionate about automating infrastructure and improving deployment pipelines. 
     With six years of experience, I’ve designed cloud-native solutions that scale effortlessly and support mission-critical applications. 
     At Infrastructure Solutions, I specialize in Kubernetes, Docker, and Terraform to deliver resilient and self-healing systems. 

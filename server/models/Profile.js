@@ -28,43 +28,6 @@ const profileSchema = new mongoose.Schema({
     type: String,
     required: true 
   },
-
-  bio: {
-    type: String,
-    required: true
-  },
-  email: {
-    type: String,
-    required: false
-  },
-  phone: {
-    type: String,
-    required: false
-  },
-  location: {
-    type: String,
-    required: false
-  },
-  jobTitle: {
-    type: String,
-    required: false
-  },
-  company: {
-    type: String,
-    required: false
-  },
-  skills: [{
-    type: String
-  }],
-  socialLinks: {
-    linkedin: String,
-    github: String,
-    twitter: String
-  },
-  website: {
-    type: String,
-    required: false
-  },
   about: {
     type: String,
     required: false
