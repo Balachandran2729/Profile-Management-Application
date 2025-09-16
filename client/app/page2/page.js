@@ -4,6 +4,8 @@ import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { fetchProfileById } from '../utils/api'; 
 import ProfileDetail1 from '../components/ProfileDetail1';
+import ProfileDetailCard from '../components/ProfileDetailCards';
+import ProfileDetail2 from '../components/ProfileDetail2';
 
 export default function Page2() {
   const searchParams = useSearchParams(); 
@@ -57,6 +59,8 @@ export default function Page2() {
   return (
     <div>
       <ProfileDetail1 profile={profile} />
+      <ProfileDetailCard />
+      <ProfileDetail2 profile={profile} />
       
     </div>
   );
