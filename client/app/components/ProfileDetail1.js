@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import Link  from 'next/link';
+import Image from 'next/image';
 import { IoMdMail ,IoIosArrowBack ,IoLogoNodejs , IoLogoCss3} from "react-icons/io";
 import { FaPhoneAlt ,FaPlayCircle , FaHtml5 , FaPython} from "react-icons/fa";
 import { FaDownload ,FaFilePowerpoint } from "react-icons/fa6";
@@ -34,7 +35,9 @@ export default function ProfileDetail1({profile}) {
         </div>
         <div className='flex flex-col justify-center items-center text-center relative'>
             <div className='me-50'>
-                <img 
+                <Image 
+                    width={150}
+                    height={150} 
                     src={profile.avatar} 
                     alt={profile.name}
                     className="object-cover rounded-full border-4 border-white w-50 h-50 absolute -top-25"
