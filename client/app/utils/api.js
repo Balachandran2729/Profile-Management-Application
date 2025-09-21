@@ -3,7 +3,7 @@ const API_BASE_URL = 'https://profile-management-application-2.onrender.com';
 
 export const fetchProfiles = async () => {
   try {
-    const response = await fetch(`${API_BASE_URL}/profiles`);
+    const response = await fetch(`${API_BASE_URL}/api/profiles`);
     if (!response.ok) {
       throw new Error('Failed to fetch profiles');
     }
@@ -17,7 +17,7 @@ export const fetchProfiles = async () => {
 
 export const fetchProfileById = async (id) => {
   try {
-    const response = await fetch(`${API_BASE_URL}/profiles/${id}`);
+    const response = await fetch(`${API_BASE_URL}/api/profiles/${id}`);
     if (!response.ok) {
       throw new Error('Failed to fetch profile');
     }
