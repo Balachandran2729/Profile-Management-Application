@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation'; 
 import Link from 'next/link';
 import { fetchProfileById } from '../utils/api'; 
@@ -31,10 +31,10 @@ export default function Page2() {
 
       loadProfile();
     } else if (id === null) {
-
-       setLoading(false); 
+      setLoading(false); 
     }
   }, [id]);
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -58,11 +58,13 @@ export default function Page2() {
   }
 
   return (
-    <div>
-      <ProfileDetail1 profile={profile} />
-      <ProfileDetailCard />
-      <ProfileDetail2 />
-      <ProfileDetail3 profile={profile} />
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div>
+        <ProfileDetail1 profile={profile} />
+        <ProfileDetailCard />
+        <ProfileDetail2 />
+        <ProfileDetail3 profile={profile} />
+      </div>
+    </Suspense>
   );
 }
