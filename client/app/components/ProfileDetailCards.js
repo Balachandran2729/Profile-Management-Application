@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Image from 'next/image';
 
 const ProfileDetailCard = () => {
     const [activeTab, setActiveTab] = useState('caseStudies');
@@ -117,7 +118,9 @@ const ProfileDetailCard = () => {
                         <div key={item.id} className="group cursor-pointer">
                             <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
                                 <div className="aspect-[3/2] overflow-hidden">
-                                    <img
+                                    <Image
+                                        width={400}
+                                        height={267}
                                         src={item.image}
                                         alt={item.alt}
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
