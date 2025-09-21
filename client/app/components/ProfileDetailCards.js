@@ -1,9 +1,11 @@
+// components/ProfileDetailCard.js
 import { useState } from 'react';
 import Image from 'next/image';
 
 const ProfileDetailCard = () => {
     const [activeTab, setActiveTab] = useState('caseStudies');
     const [currentIndex, setCurrentIndex] = useState(0);
+
     const caseStudies = [
         {
             id: 1,
@@ -83,16 +85,19 @@ const ProfileDetailCard = () => {
     const totalDots = maxIndex + 1;
 
     return (
-        <div className="w-full max-w-6xl mx-auto p-6">
-            <div className="flex justify-between items-start mb-8">
-                <h2 className="text-3xl font-bold text-gray-700 leading-tight">
+        // Adjusted padding for mobile
+        <div className="w-full max-w-6xl mx-auto p-4 sm:p-6">
+            {/* Adjusted flex direction, alignment, gap, and margin for mobile */}
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 sm:mb-8 gap-4">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-700 leading-tight text-center sm:text-left">
                     Case Insights &<br />
                     Key Projects
                 </h2>
-                <div className="flex bg-gray-100 rounded-full p-1">
+                {/* Adjusted padding, rounded corners, and made full width on mobile */}
+                <div className="flex bg-gray-100 rounded-lg sm:rounded-full p-1 w-full sm:w-auto justify-center">
                     <button
                         onClick={() => handleTabChange('caseStudies')}
-                        className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${ 
+                        className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-md sm:rounded-full text-xs sm:text-sm font-medium transition-colors ${ 
                             activeTab === 'caseStudies'
                                 ? 'bg-white text-gray-900 shadow-sm'
                                 : 'text-gray-600 hover:text-gray-900'
@@ -102,7 +107,7 @@ const ProfileDetailCard = () => {
                     </button>
                     <button
                         onClick={() => handleTabChange('projects')}
-                        className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${ 
+                        className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-md sm:rounded-full text-xs sm:text-sm font-medium transition-colors ${ 
                             activeTab === 'projects'
                                 ? 'bg-white text-gray-900 shadow-sm'
                                 : 'text-gray-600 hover:text-gray-900'
@@ -113,7 +118,8 @@ const ProfileDetailCard = () => {
                 </div>
             </div>
             <div className="relative">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                {/* Adjusted grid gap and bottom margin for mobile */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-4 sm:mb-6">
                     {visibleItems.map((item) => (
                         <div key={item.id} className="group cursor-pointer">
                             <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
@@ -127,39 +133,43 @@ const ProfileDetailCard = () => {
                                     />
                                 </div>
                             </div>
-                            <h3 className="mt-4 text-lg font-semibold text-gray-900">
+                            {/* Adjusted top margin and text size for mobile */}
+                            <h3 className="mt-3 sm:mt-4 text-base sm:text-lg font-semibold text-gray-900 text-center">
                                 {item.title}
                             </h3>
                         </div>
                     ))}
                 </div>
                 {currentData.length > itemsToShow && (
-                    <div className="absolute bottom-0.5 right-4 flex flex-col items-center space-y-2">
+                    // Adjusted position, flex direction, and spacing for mobile
+                    <div className="absolute -bottom-6 sm:-bottom-0.5 right-0 sm:right-4 flex flex-row sm:flex-col items-center sm:items-end space-x-2 sm:space-x-0 sm:space-y-2">
                         <div className="flex space-x-2">
+                            {/* Adjusted button size for mobile */}
                             <button
                                 onClick={handlePrevious}
                                 disabled={currentIndex === 0}
-                                className={`w-7 h-7 rounded-full border-2 flex items-center justify-center transition-all ${ 
+                                className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 flex items-center justify-center transition-all ${ 
                                     currentIndex === 0
                                         ? 'border-gray-200 text-gray-300 cursor-not-allowed'
                                         : 'border-gray-300 text-gray-600 hover:border-gray-400 hover:text-gray-800 bg-white shadow-sm'
                                 }`}
                             >
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                                 </svg>
                             </button>
 
+                             {/* Adjusted button size for mobile */}
                             <button
                                 onClick={handleNext}
                                 disabled={currentIndex === maxIndex}
-                                className={`w-7 h-7 rounded-full border-2 flex items-center justify-center transition-all ${ 
+                                className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 flex items-center justify-center transition-all ${ 
                                     currentIndex === maxIndex
                                         ? 'border-gray-200 text-gray-300 cursor-not-allowed'
                                         : 'border-gray-300 text-gray-600 hover:border-gray-400 hover:text-gray-800 bg-white shadow-sm'
                                 }`}
                             >
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
                             </button>
@@ -167,8 +177,9 @@ const ProfileDetailCard = () => {
                     </div>
                 )}
             </div>
+            {/* Kept dot navigation responsive as it was already */}
             {totalDots > 1 && (
-                <div className="flex justify-center space-x-2 mt-6">
+                <div className="flex justify-center space-x-2 mt-4 sm:mt-6">
                     {Array.from({ length: totalDots }, (_, index) => (
                         <button
                             key={index}
