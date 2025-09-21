@@ -15,7 +15,6 @@ const ProfileCard = ({ profile }) => {
         </div>
       </div>
       
-      {/* Profile Info */}
       <div className="p-4 text-center">
         <h3 className="font-bold text-xl text-gray-800">{profile.name}</h3>
         <p className="text-sm text-gray-600">{profile.gender} | {profile.age} | {profile.pronouns}</p>

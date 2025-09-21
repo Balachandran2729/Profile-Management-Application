@@ -41,7 +41,7 @@ export default function ProfileDetail3({ profile }) {
                 </div>
             </div>
             <div className="max-w-6xl mx-auto px-4 mt-8 text-center text-gray-500 text-sm">
-                <p>{"© 2024 MAHE D'LRU"}</p>
+                <p>{"© 2024 MAHE D&apos;LRU"}</p>
             </div>
         </footer>
     );
